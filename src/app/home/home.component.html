@@ -1,0 +1,16 @@
+<div class="catalogue"></div>
+  <h2>Catalogue des Figurines</h2>
+
+  <input type="text" placeholder="Rechercher..." (input)="onSearch($event.target.value)">
+  <select (change)="onSort($event.target.value)">
+    <option value="asc">Prix croissant</option>
+    <option value="desc">Prix décroissant</option>
+  </select>
+
+  <div *ngFor="let product of products | filterByName: searchTerm | sortByPrice: sortOrder">
+    <div class="product-placeholder"></div>
+    <p>{{ product.name }}</p>
+    <p>{{ product.price | currency }}</p>
+    <a [routerLink]="['/product', product.id]">Voir le produit</a>
+  </div>
+</div>

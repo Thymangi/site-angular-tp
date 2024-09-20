@@ -1,0 +1,17 @@
+.footer {
+  background-color: #151217;
+  color: #f9d0a3;
+  padding: 20px;
+  text-align: center;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.social-links a {
+  color: #fdd90b;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #da001e;
+}
